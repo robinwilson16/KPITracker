@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DashboardApp.Pages.AttendanceByFaculty"
+             xmlns:local="clr-namespace:DashboardApp.Pages"
+             >
+
+    <ContentView>
+        <StackLayout
+            VerticalOptions="FillAndExpand"
+            HorizontalOptions="FillAndExpand"
+            Padding="0,0"
+            Spacing="25"
+            >
+            <ActivityIndicator 
+                IsRunning="true" 
+                VerticalOptions="FillAndExpand"
+                HorizontalOptions="FillAndExpand"
+                IsVisible="True"
+                x:Name="DashboardActivityIndicator" 
+                />
+            <WebView 
+                VerticalOptions="FillAndExpand"
+                HorizontalOptions="FillAndExpand"
+                Navigating="OnNavigating"
+                Navigated="OnNavigated"
+                IsVisible="False"
+                x:Name="DashboardWebpage" 
+                />
+
+            <local:FooterPartial />
+        </StackLayout>
+    </ContentView>
+
+</ContentPage>

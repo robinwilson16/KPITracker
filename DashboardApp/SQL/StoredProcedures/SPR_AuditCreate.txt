@@ -1,0 +1,13 @@
+CREATE PROCEDURE SPR_DSH_AuditAdd
+	@Details VARCHAR(50)
+AS
+BEGIN
+	SET XACT_ABORT, NOCOUNT ON;
+
+	INSERT INTO Audit
+	(
+		Details
+	)
+	SELECT
+		@Details
+END

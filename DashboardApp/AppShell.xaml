@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="DashboardApp.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:DashboardApp.Pages"
+    Shell.FlyoutBehavior="Disabled"
+    Title="KPI Tracker">
+    <!--<ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />-->
+    <TabBar>
+        <Tab 
+            Title="Home"
+            Icon="house_door_fill.png"
+            x:Name="TabHome"
+            >
+            <ShellContent ContentTemplate="{DataTemplate local:Home}" x:Name="TabHomeContent"/>
+        </Tab>
+        <Tab 
+            Title="Attendance"
+            Icon="clipboard_check_solid.png"
+            x:Name="TabAttendance"
+            >
+            <ShellContent ContentTemplate="{DataTemplate local:AttendanceByFaculty}" x:Name="TabAttendanceContent"/>
+        </Tab>
+        <Tab 
+            Title="Retention"
+            Icon="house_door_fill.png"
+            x:Name="TabRetention"
+            >
+            <ShellContent ContentTemplate="{DataTemplate local:RetentionByFaculty}" x:Name="TabRetentionContent"/>
+        </Tab>
+    </TabBar>
+</Shell>
